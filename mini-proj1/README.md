@@ -3,7 +3,9 @@
 ## Background
 “Social mobility is the movement of individuals, families, households, or other categories of people within or between social strata in a society. It is a change in social status relative to one's current social location within a given society.” Keeping fluid social mobility is critical for the growth of cities, states, or countries. It gives hope for the poor to escape poverty and increases their living standards. It represents how resources are not controlled by a small group of people and is provided to improve the general standard of living. 
 
-In particular, I want to dive into the social mobility for two cities: Baltimore and New York. I choose these two cities because I attend university in Baltimore, and have visited New York most of the time (as an international student). And I choose to assess social mobility by looking at the individual average income. 
+In particular, I want to dive into the social mobility for two cities: Baltimore and New York. I choose these two cities because I attend university in Baltimore, and have visited New York most of the time (as an international student). Baltimore and New York is very different - New York's mediuam income is around $52,737 while $41,819 for Baltimore; New York housing costs are 495.4% more expensive than Baltimore housing costs, New York's popupatoin is around 8,000,000 while Baltimore's population is around 620,000. Yet there is still some similarity - they are located pretty close to each other, both are in a Metropolitan area. 
+
+In this analysis, I choose to assess social mobility by looking at the individual average income. 
 
 ## Business Question 
 _How is the Individual Income level differ in Baltimore and New York?_
