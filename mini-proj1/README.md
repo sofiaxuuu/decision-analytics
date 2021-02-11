@@ -30,19 +30,19 @@ By observing Figure1 and Figure2, we can find out that the Average Individual In
 ### 2. How does Parent Income affect the Immigrant’s Average Individual Income in Baltimore? 
 ![Figure 3: Average Individual Income Relative to Parent Income for Immigrants in Baltimore](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj1/figures/Figure3.png)
 
-The answer is obtained by getting the average individual income level for different races (black, white, Hispanic, Asian), and for different parent income levels (high represent 75 percentiles in income level, middle represent 50 percentiles, and low represent 25 percentile)
-
-Looking at the line graph created, there is a positive correlation between Parent Income and Individual Income for all races. And the most are linearly related with a similar gradient. 
-
-
-### 3. How does Parent Income affect the Immigrant’s Average Individual Income in New York? 
-![Figure 4: Average Individual Income Relative to Parent Income for Immigrants in New York](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj1/figures/Figure4.png)
-
-The answer is also obtained by getting the average individual income level for different races (black, white, Hispanic, Asian), and for different parent income levels (high represent 75 percentiles in income level, middle represent 50 percentiles, and low represent 25 percentile). 
+The answer is obtained by getting the average individual income level for different races (black, white, Hispanic, Asian), and for different parent income levels (high represent 75 percentiles in income level, middle represent 50 percentiles, and low represent 25 percentile). 
 
 There are a few interesting observations. First, I find that the Hispanic in Baltimore relatively low social mobility - this is shown by the high positive gradience of the approx linear relationship between Parent Income Level and Individual Average Income. The steep line represents that individual with wealthy parents tend to have much higher income. 
 
 Secondly, I find that there is a negative correlation between Parent Income Level and Individual Average Income for Asian living in Baltimore. This is counter-intuitive as it means that individuals with less wealthy parents will have higher income. 
+
+### 3. How does Parent Income affect the Immigrant’s Average Individual Income in New York? 
+![Figure 4: Average Individual Income Relative to Parent Income for Immigrants in New York](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj1/figures/Figure4.png)
+
+The answer is also obtained by getting the average individual income level for different races (black, white, Hispanic, Asian), and for different parent income levels (high represent 75 percentiles in income level, middle represent 50 percentiles, and low represent 25 percentile)
+
+Looking at the line graph created, there is a positive correlation between Parent Income and Individual Income for all races. And the most are linearly related with a similar gradient. 
+
 
 ## My Data Manipulation 
 This is a step-by-step descriptions on how I manipulated the Excel data and get the following files: 
