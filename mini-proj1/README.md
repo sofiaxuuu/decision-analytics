@@ -44,6 +44,23 @@ There are a few interesting observations. First, I find that the Hispanic in Bal
 
 Secondly, I find that there is a negative correlation between Parent Income Level and Individual Average Income for Asian living in Baltimore. This is counter-intuitive as it means that individuals with less wealthy parents will have higher income. 
 
+## My Data Manipulation 
+This is a step-by-step descriptions on how I manipulated the Excel data and get the following files: 
+- [New York City Immigrants vs U.S. Native Income](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj1/sources/ny_cty_kir_imm_and_native_rP_gP_pall.xlsx)
+- [Baltimore City Immigrants vs U.S. Native Income](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj1/sources/baltimore_cty_kir_imm_and_native_rP_gP_pall.xlsx)
+- [Immigrant's Parent and Individual Income Comparision](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj1/sources/imm_parent_child_income_comparisoin.xlsx)
+
+### 1. To create my “Figure 1: Average Individual Income for Immigrants and U.S. Natives in Baltimore”, I first combine two datasets downloaded from the Opportunity Atlas Data, "baltimore_cty_kir_imm _rP_gP_pall" and "baltimore_cty_kir_ native_rP_gP_pall” and form a new excel table named “baltimore_cty_kir_imm_and_native_rP_gP_pall”. 
+
+In the resultant file, I insert a new column in the front named “Imm/Native” to represent if one row belongs to Immigrants or US Native. 
+Then, I use the PivotTable, setting ‘Imm/Native’ as CATEGORIES, and “Average of Individual Income for Immigrants” and “Average of Individual Income for Native” as VALUES. 
+
+### 2. To generat4e "Figure3: Average Individual Income Relative to Parent Income for Immigrants in Baltimore": 
+For the “imm_parent_child_income_comparisoin” excel book, I download the individual income data from the Opportunity Atlas Data, calculate the average income for different races and different parent income level. 
+ 
+Then, I insert a 2-D line graph and select multiple regions as different Series to draw multiple lines in the same line graph. 
+
+
 ## Summary
 To summarize from the above analysis, I find that: 
 The individual income level for U.S. Native is smaller than Immigrants for both Baltimore and New York, and the values are approximately the same. 
