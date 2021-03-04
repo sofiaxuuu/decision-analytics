@@ -10,7 +10,7 @@ _Who Becomes an Inventor? The Importance of Exposure to Innovation_
 This question is meaningful because it can help educators and the government to figure out factors that foster innovation, thereby providing a better environment to generate more innovation. 
 
 ## Data Question 
-_How did parents’ income, students’ income after graduation, college ranking (elite, selective, nonseletive) influence the college’s rate of inventors?_
+__How did parents’ income, students’ income after graduation, college ranking (elite, selective, nonseletive) influence the college’s rate of inventors?__
 
 ## List of Data Source 
 To answer the above question, I utlize the Opportunity Insights website (https://opportunityinsights.org/data/). There are two major dataset that I use: 
@@ -73,11 +73,12 @@ _The predicted share of investors = 0. 04118114 - 0.0631198 * students’ averag
 Next, we will go beyond investigating only one independent variable, but many - how will variables including "Is_elite", "Is_selective", "nonselective", "par_mean", "k_mean", and "is_outliner" has influence on share of "investor"? 
 
 To answer the question, I will perform milti-vairable linear regression using the  Excel Data Analysis ToolPack. I go do "Data Analysis", select "Regression", and put in Y-range = "inventor" and x-range = "Is_elite", "Is_selective", "nonselective", "par_mean", "k_mean". This will generate a SUMMARY OUTPUT AS FOLLOWS: 
-!(figure 2. The Output Summary of Milt-Variable Linear Regression between share of inventors and school selectivity, parents' income, students future income)[https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj2/figure%202.png]
+![figure 2. The Output Summary of Milt-Variable Linear Regression between share of inventors and school selectivity, parents' income, students future income](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj2/figure%202.png)
+
 
 Since I also select line fit plot, several graphs of how each X variable relates to Y variable is generated: 
-!(figure 3. Linear Regression between share of inventors and school selectivity)[https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj2/figure%203.png]
-!(figure 4. Linear Regression between share of inventors and parent's income and children's fiture income)[https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj2/figure%204.png]
+![figure 3. Linear Regression between share of inventors and school selectivity](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj2/figure%203.png)
+![figure 4. Linear Regression between share of inventors and parent's income and children's fiture income](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj2/figure%204.png]
 
 Looking at the summary output, i find that only the P-value for is_elite and par_mean is relatively small. The p-valuemeasures probability that the result is by chance, so the smaller it is, the better the regression. Hence, I beleive these two variables have most influence on the rate of parent among college students. Therefore, to make the prediction relationship more accurante, I decided to perform another multivariable liner regression with two independent variables only (is_elite and par_mean).  
 
@@ -85,9 +86,9 @@ Looking at the summary output, i find that only the P-value for is_elite and par
 ### Plot and Calculate the regression
 Therefore, I copy data from "aggregated_data" table to "updated_prediction" sheet within same excel file, and I only keep two independent variables - is_elite and par_mean. I use "Data Analysis" again, select "Regression", and put in Y-range = "inventor" and x-range = "Is_elite" and "par_mean" This will generate a SUMMARY OUTPUT AS FOLLOWS: 
 
-!(figure 5. The Output Summary of Milt-Variable Linear Regression between share of inventors and school selectivity and parents' income)[https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj2/figure%205.png]
+![figure 5. The Output Summary of Milt-Variable Linear Regression between share of inventors and school selectivity and parents' income](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj2/figure%205.png)
 
-!(figure 6. Linear Regression between if the school is elite and share of inventors and parent's income)[https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj2/figure%206.png]
+![figure 6. Linear Regression between if the school is elite and share of inventors and parent's income](https://github.com/sophiaxuu/decision-analytics/blob/main/mini-proj2/figure%206.png)
 
 ### What does data mean? 
 Here, R2 values means R-squared is a measure of how well a linear regression model “fits” a dataset. Also commonly called the coefficient of determination. Our r-squares is 0.33, which is not as large as i want it to be. There may be further investigation needed to understand. 
@@ -96,7 +97,7 @@ The standard error gives in particular is an indication of the likely accuracy o
 
 The positive coefficient between is_elite and share_of_inventor shows that elite school does tend to have more students that files patents. 
 The negative coefficient between par_mean and share_of_inventor shows that students with wealthy parents are less likely to be an inventor as students. 
-_Share_of_inventor = 0.0371218 + 0.013103192 * is_elite -0.062772509 * par_mean _ 
+__Share_of_inventor = 0.0371218 + 0.013103192 * is_elite -0.062772509 * par_mean__
  
 In null hypothesis significance testing, the p-value is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis is correct. In our study, the p-value of both is_elite and par_income is very small, which is good indication of prediction. 
 
@@ -122,7 +123,7 @@ The purpose of finding outliers is that, by analyzing our outlier data points, I
 ## Further Analysis and Application
 We can conclude that, we can make prediction of share of inventore in colleges based on if it's elite school and parent's average income level. 
 
-_Share_of_inventor = 0.0371218 + 0.013103192 * is_elite -0.062772509 * par_mean _ 
+__Share_of_inventor = 0.0371218 + 0.013103192 * is_elite -0.062772509 * par_mean__
 
 The positive coefficient between is_elite and share_of_inventor shows that elite school does tend to have more students that files patents. This could be explained by the fact that elite school tend to have more powerful research centers, faculties and funding to conduct scientific research. Hence there is a positive correlation. 
 The negative coefficient between par_mean and share_of_inventor shows that students with wealthy parents are less likely to be an inventor as students. This coil dbe explained as wealthy people don’t need patents or innovation to increase social status, while people in lower-income levels are more motivated to innovate and improve their capital accumulation. 
