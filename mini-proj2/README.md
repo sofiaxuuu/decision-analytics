@@ -5,7 +5,7 @@ Innovation is the act of bringing new ideas, methods, or things. Why innovation 
 
 ## Business Question 
 Therefore, this leads to my business question of: 
-_Who Becomes an Inventor? The Importance of Exposure to Innovation_
+__The Importance of Exposure to Innovation: What impact the culture of innovation in college?__
 
 This question is meaningful because it can help educators and the government to figure out factors that foster innovation, thereby providing a better environment to generate more innovation. 
 
