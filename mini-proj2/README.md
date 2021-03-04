@@ -96,7 +96,7 @@ The standard error gives in particular is an indication of the likely accuracy o
 
 The positive coefficient between is_elite and share_of_inventor shows that elite school does tend to have more students that files patents. 
 The negative coefficient between par_mean and share_of_inventor shows that students with wealthy parents are less likely to be an inventor as students. 
-Share_of_inventor = 0.0371218 + 0.013103192 * is_elite -0.062772509 * par_mean  
+_Share_of_inventor = 0.0371218 + 0.013103192 * is_elite -0.062772509 * par_mean _ 
  
 In null hypothesis significance testing, the p-value is the probability of obtaining test results at least as extreme as the results actually observed, under the assumption that the null hypothesis is correct. In our study, the p-value of both is_elite and par_income is very small, which is good indication of prediction. 
 
@@ -106,10 +106,32 @@ To justify my updated linear regression is better, I look at the F value and fou
 
 
 ## Calculate Prediction and Identify Outliners 
+Next, I want to investigate if there is any outliners in the data. To do so, I need to calculating prediction, then residul, then use Standard Error of Residual to find Outliers. 
 
+1. To calculate the “predicted_share_of_inventor”, i use the above prediction equation Share_of_inventor = 0.0371218 + 0.013103192 * is_elite -0.062772509 * par_mean  
+= $L$19 + $L$20 * G2 + $L$21 * H2 where L19 is intercept, L20 is coefficient of is_elite, and L21 is coefficient of par_mean 
+The next step is to calculate the residual which is invetor_error = actual share of inventor - predicted share of inventor 
+ 
+2. Next, we need to calculate the standard error of residual using =STEXY(known ys, known xs) = 0.012890078 according to the regression statistics 
+
+3. Finally, Determine which of our data points are considered outliers based on our error and standard error of the residual calculations. We know that a data point is considered an outlier if the absolute value of the error is greater than 2 x the standard error of regression, so we can show if each value is an outlier with the Excel IF statement:
+=IF(ABS(J2)>2*$N$24, “outlier”, “not outlier”)
+
+The purpose of finding outliers is that, by analyzing our outlier data points, I can potentially identify causes of an outlier to improve current policy or methods to incentivize innovation. 
 
 ## Further Analysis and Application
+We can conclude that, we can make prediction of share of inventore in colleges based on if it's elite school and parent's average income level. 
 
-[TODO: explain the intiuation bedhind the trend]
+_Share_of_inventor = 0.0371218 + 0.013103192 * is_elite -0.062772509 * par_mean _ 
 
+The positive coefficient between is_elite and share_of_inventor shows that elite school does tend to have more students that files patents. This could be explained by the fact that elite school tend to have more powerful research centers, faculties and funding to conduct scientific research. Hence there is a positive correlation. 
+The negative coefficient between par_mean and share_of_inventor shows that students with wealthy parents are less likely to be an inventor as students. This coil dbe explained as wealthy people don’t need patents or innovation to increase social status, while people in lower-income levels are more motivated to innovate and improve their capital accumulation. 
+
+With those correlation in mind, educational institutes that want to foster innovation could try to find students with middle parents' income, and provide better education as "elite school". The government will be able to better provide environment and generat policies that encourages more innovation. 
+
+
+Some possible areas to improve on will be: 
+- I could potentailly use another dataset that gives numeric ranking as a variable to measure school selectivity instead of grouping them 
+- I could investigate and try to understand causes of those outliers 
+- I could look into what factors of elite school education is most closedly related to fostering inventors 
 
